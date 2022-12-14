@@ -78,33 +78,36 @@ public final class Constants {
     /* Angle Encoder Invert */
     public static final boolean canCoderInvert = false;
 
+    
     /* Module Specific Constants */
     /* Front Left Module - Module 0 */
     public static final class Mod0 {
+      public static final int driveMotorID = 5;
+      public static final int angleMotorID = 1;
+      public static final int canCoderID = 21;
+      public static final double angleOffset = 658;
+      public static final SwerveModuleConstants constants =
+          new SwerveModuleConstants(driveMotorID, angleMotorID, canCoderID, angleOffset);
+    }
+    
+    /* Front Right Module - Module 1 */
+    public static final class Mod1 {
       public static final int driveMotorID = 6;
       public static final int angleMotorID = 2;
       public static final int canCoderID = 22;
-      public static final double angleOffset = 692.58203125;
+      public static final double angleOffset = 682.58203125;
       public static final SwerveModuleConstants constants =
           new SwerveModuleConstants(driveMotorID, angleMotorID, canCoderID, angleOffset);
     }
 
-    /* Front Right Module - Module 1 */
-    public static final class Mod1 {
-      public static final int driveMotorID = 5;
-      public static final int angleMotorID = 1;
-      public static final int canCoderID = 21;
-      public static final double angleOffset = 651.400390625;
-      public static final SwerveModuleConstants constants =
-          new SwerveModuleConstants(driveMotorID, angleMotorID, canCoderID, angleOffset);
-    }
+
 
     /* Back Left Module - Module 2 */
     public static final class Mod2 {
       public static final int driveMotorID = 7;
       public static final int angleMotorID = 3;
       public static final int canCoderID = 23;
-      public static final double angleOffset = 556.400390625;
+      public static final double angleOffset = 555.400390625;
       public static final SwerveModuleConstants constants =
           new SwerveModuleConstants(driveMotorID, angleMotorID, canCoderID, angleOffset);
     }
